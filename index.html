@@ -70,11 +70,12 @@ function googleTranslateElementInit() {
       <script>
       function initMap() {
         var myLatLng = {lat: 25.777044,  lng: -80.185453};
-        var myLatLng2 = {lat:25.779183, lng: -80.186863};
-        var myLatLng3 = {lat: 25.779216, lng:-80.186821 };
-        var myLatLng4 = {lat:25.773423, lng: -80.186578};
-        var myLatLng5 = {lat: 25.777099, lng:-80.185427 };
-        var myLatLng6 = {lat:25.777587, lng:-80.190153};
+        var myLatLng2 = {lat: 25.779183, lng: -80.186863};
+        var myLatLng3 = {lat: 25.779216, lng: -80.186821 };
+        var myLatLng4 = {lat: 25.773423, lng: -80.186578};
+        var myLatLng5 = {lat: 25.777099, lng: -80.185427 };
+        var myLatLng6 = {lat: 25.777587, lng: -80.190153};
+        var myLatLng7 = {lat: 25.7670007, lng: -80.18926540000001};
         var map;
           map = new google.maps.Map(document.getElementById('map'), {
             center: myLatLng,
@@ -266,6 +267,37 @@ function googleTranslateElementInit() {
 
       var infowindow6 = new google.maps.InfoWindow({
         content: contentString7
+      });
+
+
+      var contentString7 = '<div id="content">'+
+                          '<div id="siteNotice">'+
+                          '</div>'+
+                          '<h1 id="firstHeading" class="firstHeading">701 Lobby</h1>'+
+                          '<div id="bodyContent">'+
+                          '<p>' +
+                          '<p>  Around Cafe 701 and U.S. Trust </p>'+
+                          '<p> 401 Biscayne Blvd. Miami, FL 33132</p>'+
+                          '<img src="handicap.png" height="20px">'+
+                          '<img src="baby.png" height="20px">'+
+                          '<img src="flower.png" height="20px">'+
+                          ''+
+                          '</div>'+
+                          '</div>';
+
+      var infowindow7 = new google.maps.InfoWindow({
+      content: contentString7
+      });
+
+
+      var marker7 = new google.maps.Marker({
+      position: myLatLng7,
+      map: map,
+      title: 'Bayside Lower Level Restroom'
+      });
+
+      marker7.addListener('click', function() {
+      infowindow7.open(map, marker7);
       });
 
 
