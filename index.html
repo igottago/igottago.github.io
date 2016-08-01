@@ -18,6 +18,7 @@
         <meta charset="utf-8">
         <title>Info windows</title>
         <style>
+
           html, body {
             height: 100%;
             margin: 0;
@@ -27,8 +28,8 @@
             height: 100%;
           }
         </style>
-
-
+        <!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
   </head>
   <body>
   <div id= "ovr_map">
@@ -49,6 +50,12 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- <div id="toggle"></div>
+          <script>
+          $( document ).click(function() {
+            $("#toggle").toggle("bounce", {times: 3}, "slow" );
+          });
+          </script> -->
           <ul class="nav navbar-nav">
 
             <li><a href="http://www.cnn.com/"> <b>| CNN News</b><span class="sr-only">(current)</span></a></li>
@@ -60,7 +67,7 @@
       </div><!-- /.container-fluid -->
     </nav>
   </div>
-  <div id="map"></div>
+    <div id="map"></div>
       <script>
       function initMap() {
         var myLatLng = {lat: 25.777044,  lng: -80.185453};
@@ -68,6 +75,7 @@
         var myLatLng3 = {lat: 25.779216, lng:-80.186821 };
         var myLatLng4 = {lat:25.773423, lng: -80.186578};
         var myLatLng5 = {lat: 25.777099, lng:-80.185427 };
+        var myLatLng6 = {lat:25.777587, lng:-80.190153};
         var map;
           map = new google.maps.Map(document.getElementById('map'), {
             center: myLatLng,
@@ -75,51 +83,54 @@
           });
 
 
-                    var contentString = '<div id="content">'+
+                    var contentString1 = '<div id="content">'+
                                         '<div id="siteNotice">'+
                                         '</div>'+
-                                        '<h1 id="firstHeading" class="firstHeading">First Floor Bathroom</h1>'+
+                                        '<h1 id="firstHeading" class="firstHeading">First Floor Restroom </h1>'+
                                         '<div id="bodyContent">'+
-                                        '<p>' +
-                                        ' Between Sunglasses spot & Perfumania '+
-                                        '<p> handicap stall</p>'+
-                                        ''+
-                                        ''+
+                                        '<p> Between Sunglasses spot & Perfumaniaz</p> '+
+                                        '<p> 401 Biscayne Blvd. Miami, FL 33132</p>'+
+                                        '<img src="handicap.png" height="20px">'+
+                                        '<img src="baby.png" height="20px">'+
                                         '</div>'+
                                         '</div>';
 
-                var infowindow = new google.maps.InfoWindow({
-                  content: contentString
+
+                var infowindow1 = new google.maps.InfoWindow({
+                  content: contentString1
                 });
+
 
 
           var marker1 = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Bayside Upper Level Restroom'
+          title: 'Baysiom'
         });
 
         marker1.addListener('click', function() {
-          infowindow.open(map, marker1);
+          infowindow1.open(map, marker1);
+
         });
 
 
-
-        var contentString = '<div id="content">'+
+        var contentString2 = '<div id="content">'+
                             '<div id="siteNotice">'+
                             '</div>'+
-                            '<h1 id="firstHeading" class="firstHeading">First Floor Bathroom</h1>'+
+                            '<h1 id="firstHeading" class="firstHeading">Second Floor Restroom</h1>'+
                             '<div id="bodyContent">'+
                             '<p>' +
-                            ' Between Sunglasses spot & Perfumania '+
-                            '<p> handicap stall</p>'+
-                            ''+
+                            '<p>  Between Makis and Bath and Body Works </p>'+
+                            '<p> 401 Biscayne Blvd. Miami, FL 33132</p>'+
+                            '<img src="handicap.png" height="20px">'+
+                            '<img src="baby.png" height="20px">'+
+                            '<img src="flower.png" height="20px">'+
                             ''+
                             '</div>'+
                             '</div>';
 
-      var infowindow = new google.maps.InfoWindow({
-      content: contentString
+      var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
       });
 
 
@@ -130,24 +141,27 @@
     });
 
       marker2.addListener('click', function() {
-      infowindow.open(map, marker2);
+      infowindow2.open(map, marker2);
       });
 
-      var contentString = '<div id="content">'+
+      var contentString3 = '<div id="content">'+
                           '<div id="siteNotice">'+
                           '</div>'+
-                          '<h1 id="firstHeading" class="firstHeading">First Floor Bathroom</h1>'+
+                          '<h1 id="firstHeading" class="firstHeading">First Floor Restroom</h1>'+
                           '<div id="bodyContent">'+
                           '<p>' +
-                          ' Between Sunglasses spot & Perfumania '+
-                          '<p> handicap stall</p>'+
+                            '<p>  Between Gap Kids & Express Men </p>'+
+                            '<p> 401 Biscayne Blvd. Miami, FL 33132</p>'+
+                            '<img src="handicap.png" height="20px">'+
+                            '<img src="baby.png" height="20px">'+
+                            '<img src="flower.png" height="20px">'+
                           ''+
                           ''+
                           '</div>'+
                           '</div>';
 
-    var infowindow = new google.maps.InfoWindow({
-    content: contentString
+    var infowindow3 = new google.maps.InfoWindow({
+    content: contentString3
     });
 
     var marker3 = new google.maps.Marker({
@@ -158,25 +172,27 @@
 
 
     marker3.addListener('click', function() {
-    infowindow.open(map, marker3);
+    infowindow3.open(map, marker3);
     });
 
 
-    var contentString = '<div id="content">'+
+    var contentString4 = '<div id="content">'+
                         '<div id="siteNotice">'+
                         '</div>'+
-                        '<h1 id="firstHeading" class="firstHeading">First Floor Bathroom</h1>'+
+                        '<h1 id="firstHeading" class="firstHeading">Outdoor Restroom</h1>'+
                         '<div id="bodyContent">'+
-                        '<p>' +
-                        ' Between Sunglasses spot & Perfumania '+
-                        '<p> handicap stall</p>'+
+                        '<p> Bayfront Park </p>'+
+                        '<p> 301 Biscayne Blvd. Way Miami, FL 33131</p>'+
+                        '<img src="handicap.png" height="20px">'+
+                        '<img src="baby.png" height="20px">'+
+
                         ''+
                         ''+
                         '</div>'+
                         '</div>';
 
-  var infowindow = new google.maps.InfoWindow({
-  content: contentString
+  var infowindow4 = new google.maps.InfoWindow({
+  content: contentString4
   });
 
 
@@ -187,25 +203,29 @@
     });
 
   marker4.addListener('click', function() {
-  infowindow.open(map, marker4);
+  infowindow4.open(map, marker4);
   });
 
 
-      var contentString = '<div id="content">'+
+      var contentString5 = '<div id="content">'+
                           '<div id="siteNotice">'+
                           '</div>'+
-                          '<h1 id="firstHeading" class="firstHeading">First Floor Bathroom</h1>'+
+                          '<h1 id="firstHeading" class="firstHeading">Second Floor Restroom</h1>'+
                           '<div id="bodyContent">'+
                           '<p>' +
-                          ' Between Sunglasses spot & Perfumania '+
-                          '<p> handicap stall</p>'+
+                          '<p> Between Z Nature and GNC </p> '+
+                          '<p> 401 Biscayne Blvd. Miami, FL 33132</p>'+
+                          '<img src="handicap.png" height="20px">'+
+                          '<img src="baby.png" height="20px">'+
+                          '<img src="flower.png" height="20px">'+
+
                           ''+
                           ''+
                           '</div>'+
                           '</div>';
 
-    var infowindow = new google.maps.InfoWindow({
-    content: contentString
+    var infowindow5 = new google.maps.InfoWindow({
+    content: contentString5
     });
 
     var marker5 = new google.maps.Marker({
@@ -216,8 +236,39 @@
 
 
     marker5.addListener('click', function() {
-    infowindow.open(map, marker5);
-    });
+    infowindow5.open(map, marker5);
+});
+  var marker6 =new google.maps.Marker({
+    position: myLatLng6,
+    map: map,
+    title: 'Building 8'
+  });
+
+    marker6.addListener('click', function() {
+    infowindow6.open(map, marker6);
+});
+
+      var contentString7 = '<div id="content">'+
+                          '<div id="siteNotice">'+
+                          '</div>'+
+                          '<h1 id="firstHeading" class="firstHeading">First Floor Restroom</h1>'+
+                          '<div id="bodyContent">'+
+                          '<p>' +
+                          '<p> Behind  the Magic Center in Building 8 </p> '+
+                          '<p> 315 NE 2nd Ave, Miami, FL 33132</p>'+
+                          '<img src="gendernuetral.png" height="20px">'+
+
+
+
+                          ''+
+                          ''+
+                          '</div>'+
+                          '</div>';
+
+      var infowindow6 = new google.maps.InfoWindow({
+        content: contentString7
+      });
+
 
 
         }
@@ -230,21 +281,25 @@
                   <div class="filters types">
                       <div class="filter-header"><b><center>Legend</b></center></div>
                       <div>
+                        <input type= "checkbox">
                           <id="Handicap" name="type-filter[]" data-filterby="type" data-filtervalue="Handicap" />
                           <img src="handicap.png" height="20px">
                           <label for="Handicap">Handicapped</label>
                       </div>
                       <div>
+                        <input type= "checkbox">
                           <id="gender_neutral" name="type-filter[]" data-filterby="type" data-filtervalue="gender_neutral" />
                           <img src="gendernuetral.png" height="20px">
                           <label for="gender_neutral">Gender Neutral</label>
                       </div>
                       <div>
+                        <input type= "checkbox">
                           <id="feminine_products" name="type-filter[]" data-filterby="type" data-filtervalue="feminine_products" />
                           <img src="flower.png" height="20px">
                           <label for="feminine_products">Contains Feminine Products</label>
                       </div>
                       <div>
+                        <input type= "checkbox">
                           <id="changing_station" name="date-filter" data-filterby="date" data-filtervalue="changing_station" />
                           <img src="baby.png" height="20px">
                           <label for="changing_station">Baby Changing Station</label>
