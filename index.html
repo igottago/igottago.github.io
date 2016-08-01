@@ -77,6 +77,7 @@ function googleTranslateElementInit() {
         var myLatLng6 = {lat: 25.777587, lng: -80.190153};
         var myLatLng7 = {lat: 25.7670007, lng: -80.18926540000001};
         var myLatLng8 = {lat: 25.764665, lng: -80.192921};
+        var myLatLng9 = {lat: 25.765389, lng: -80.19465};
         var map;
           map = new google.maps.Map(document.getElementById('map'), {
             center: myLatLng,
@@ -304,10 +305,10 @@ function googleTranslateElementInit() {
       var contentString8 = '<div id="content">'+
                           '<div id="siteNotice">'+
                           '</div>'+
-                          '<h1 id="firstHeading" class="firstHeading">701 Lobby</h1>'+
+                          '<h1 id="firstHeading" class="firstHeading">Perricones</h1>'+
                           '<div id="bodyContent">'+
                           '<p>' +
-                          '<p> Perricones </p>'+
+                          '<p> Inside Perricones Marketplace & Cafe </p>'+
                           '<p> 15 SE 10th St, Miami, FL 33130</p>'+
                           '<img src="handicap.png" height="20px">'+
                           '<img src="baby.png" height="20px">'+
@@ -331,7 +332,35 @@ function googleTranslateElementInit() {
       infowindow8.open(map, marker8);
       });
 
+      var contentString9 = '<div id="content">'+
+                          '<div id="siteNotice">'+
+                          '</div>'+
+                          '<h1 id="firstHeading" class="firstHeading">Publix Restroom</h1>'+
+                          '<div id="bodyContent">'+
+                          '<p>' +
+                          '<p>  Inside Publix </p>'+
+                          '<p> 70 SW 9th St, Miami, FL 33130</p>'+
+                          '<img src="handicap.png" height="20px">'+
+                          '<img src="baby.png" height="20px">'+
+                          ''+
+                          ''+
+                          '</div>'+
+                          '</div>';
 
+      var infowindow9 = new google.maps.InfoWindow({
+      content: contentString9
+      });
+
+
+      var marker9 = new google.maps.Marker({
+      position: myLatLng9,
+      map: map,
+      title: 'Bayside Lower Level Restroom'
+      });
+
+      marker9.addListener('click', function() {
+      infowindow9.open(map, marker9);
+      });
 
 
         }
