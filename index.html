@@ -78,6 +78,8 @@ function googleTranslateElementInit() {
         var myLatLng7 = {lat: 25.7670007, lng: -80.18926540000001};
         var myLatLng8 = {lat: 25.764665, lng: -80.192921};
         var myLatLng9 = {lat: 25.765389, lng: -80.19465};
+        var myLatLng10 = {lat: 25.77307, lng: -80.189216};
+        var myLatLng11 = {lat: 25.772295, lng: -80.18678};
         var map;
           map = new google.maps.Map(document.getElementById('map'), {
             center: myLatLng,
@@ -305,7 +307,7 @@ function googleTranslateElementInit() {
       var contentString8 = '<div id="content">'+
                           '<div id="siteNotice">'+
                           '</div>'+
-                          '<h1 id="firstHeading" class="firstHeading">Perricones</h1>'+
+                          '<h1 id="firstHeading" class="firstHeading">Perricones Restroom</h1>'+
                           '<div id="bodyContent">'+
                           '<p>' +
                           '<p> Inside Perricones Marketplace & Cafe </p>'+
@@ -361,6 +363,73 @@ function googleTranslateElementInit() {
       marker9.addListener('click', function() {
       infowindow9.open(map, marker9);
       });
+
+      var contentString10 = '<div id="content">'+
+                          '<div id="siteNotice">'+
+                          '</div>'+
+                          '<h1 id="firstHeading" class="firstHeading">Starbucks Restroom</h1>'+
+                          '<div id="bodyContent">'+
+                          '<p>' +
+                          '<p>  Inside Starbucks </p>'+
+                          '<p> 110 SE 3rd Ave, Miami, FL 33132</p>'+
+                          '<img src="handicap.png" height="20px">'+
+                          '<img src="baby.png" height="20px">'+
+                          ''+
+                          ''+
+                          '</div>'+
+                          '</div>';
+
+      var infowindow10 = new google.maps.InfoWindow({
+      content: contentString10
+      });
+
+
+      var marker10 = new google.maps.Marker({
+      position: myLatLng10,
+      map: map,
+      title: 'Bayside Lower Level Restroom'
+      });
+
+      marker10.addListener('click', function() {
+      infowindow10.open(map, marker10);
+      });
+
+      var contentString11 = '<div id="content">'+
+                          '<div id="siteNotice">'+
+                          '</div>'+
+                          '<h1 id="firstHeading" class="firstHeading">Miami Center Restroom</h1>'+
+                          '<div id="bodyContent">'+
+                          '<p>' +
+                          '<p>  Inside the Miami Center</p>'+
+                          '<p> 201 S Biscayne Blvd, Miami, FL 33131</p>'+
+                          '<img src="handicap.png" height="20px">'+
+                          '<img src="baby.png" height="20px">'+
+                          ''+
+                          ''+
+                          '</div>'+
+                          '</div>';
+
+      var infowindow11 = new google.maps.InfoWindow({
+      content: contentString11
+      });
+
+
+      var marker11 = new google.maps.Marker({
+      position: myLatLng11,
+      map: map,
+      title: 'Bayside Lower Level Restroom'
+      });
+
+      marker11.addListener('click', function() {
+      infowindow11.open(map, marker11);
+      });
+
+
+
+
+
+
+
 
 
         }
